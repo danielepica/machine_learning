@@ -99,14 +99,6 @@ plt.show()
 
 #QUALI INFORMAZIONI RIESCO A RICAVARE DA QUESTO DATASET?
 
-#Feature selection:
-corr_matrix = clinical_df.corr()
-plt.figure(figsize=(8, 8)) #crea una nuova figura
-sns.heatmap(corr_matrix, annot = True, cmap = 'coolwarm')
-plt.title('Correlation Matrix')
-plt.show() # È una funzione fornita dal modulo matplotlib.pyplot che mostra tutti i grafici che sono stati creati nel contesto corrente.
-
-#Non vi è una grande correlazione tra i vari dati clinici presenti.
 
 
 #La differenza principale tra "plt.subplots" e "plt.subplot" è che "plt.subplots" crea una griglia di subplot 
@@ -165,4 +157,11 @@ print(clinical_df.columns)
 #Poi vedere meglio la correlazione tra le features
 
 
+#Feature selection:
+corr_matrix = clinical_df.corr()
+plt.figure(figsize=(8, 8)) #crea una nuova figura
+sns.heatmap(corr_matrix, annot = True, cmap = 'coolwarm')
+plt.title('Correlation Matrix')
+plt.show() # È una funzione fornita dal modulo matplotlib.pyplot che mostra tutti i grafici che sono stati creati nel contesto corrente.
 
+#Non vi è una grande correlazione tra i vari dati clinici presenti.
